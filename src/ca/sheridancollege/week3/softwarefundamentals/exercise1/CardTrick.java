@@ -16,6 +16,10 @@ import java.util.Scanner;
  */
 public class CardTrick {
     
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
@@ -25,7 +29,8 @@ public class CardTrick {
             Card c = new Card();
             c.setValue(r.nextInt(13)+1);
             c.Suit(Card.setSUITS[r.nextInt(4)]);
-           
+            
+            
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
