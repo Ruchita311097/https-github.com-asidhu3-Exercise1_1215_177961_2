@@ -23,24 +23,25 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Scanner sc=new Scanner(System.in);
-        Random r=new Random();
-        for (Card magicHand1 : magicHand) {   
-            Card c = new Card();
-            c.setValue(r.nextInt(13)+1);
-            c.Suit(Card.setSUITS[r.nextInt(4)]);
+        //Scanner sc=new Scanner(System.in);
+       // Random r=new Random();
+        for (int i=0; i<magicHand.length;i++) {   
+            magicHand[i] = new Card();
+            magicHand[i].setValue((int)(Math.random()*(13)+1));
+            magicHand[i].setSuit(Card.SUITS[(int)(Math.random()*(4))]);
             
             
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-        System.out.println("Enter value:");
-        int value=sc.nextInt();
-        System.out.println("Enter suit:");
-        String suit=sc.next();
-        Card k=new Card();
-        k.setValue(value);
-        k.setSuit(suit);
+       // System.out.println("Enter value:");
+        //int value=sc.nextInt();
+        //System.out.println("Enter suit:");
+        //String suit=sc.next();
+        //Card k=new Card();
+        //int value = 0;
+        //k.setValue(value);
+        //k.setSuit(suit);
         
         Card lucky_card = new Card();
         lucky_card.setValue(4);
@@ -48,20 +49,21 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
+           
         
-        for(i=0; i<magicHand.length;i++)
-        {
-            if((magicHand[i].getValue==k.getvalue()) && magicHand[i].getSuit==k.getSuit()
-               {
-                   
-                    System.out.println(" Right card");
-            }else{
-             System.out.println("Wrong card");
+        for (int i = 0; i < magicHand.length; i++) {
+            if(lucky_card.getValue() == magicHand[i].getValue()
+                && lucky_card.getSuit().equals(magicHand[i].getSuit())) 
+                {
+                    System.out.println("Right card ");
+            }else
+             System.out.println("Wrong card. ");
                 
         }
-
-            }
-        }
-    }
+            }            } 
+             
+        
+        
     
-}
+    
+
