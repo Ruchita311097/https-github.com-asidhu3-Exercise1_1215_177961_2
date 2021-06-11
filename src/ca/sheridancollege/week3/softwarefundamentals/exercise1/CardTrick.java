@@ -34,6 +34,17 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
+        System.out.println("Enter value:");
+        int value=sc.nextInt();
+        System.out.println("Enter suit:");
+        String suit=sc.next();
+        Card k=new Card();
+        k.setValue(value);
+        k.setSuit(suit);
+        
+        Card lucky_card = new Card();
+        lucky_card.setValue(4);
+        lucky_card.setSuit("Hearts");
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
